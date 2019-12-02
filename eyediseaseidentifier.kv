@@ -1,0 +1,58 @@
+MainPage:
+    GridLayout:
+        cols: 2
+        size: root.width, root.height
+
+        Label:
+            text: "Please select an image to analyze:"
+
+        GridLayout:
+            rows: 2
+            size: root.width, root.height
+
+            Label:
+                id: imageLabel
+                text: "No image selected..."
+
+            Button:
+                text: 'Load'
+                on_release: root.show_load()
+
+        Label:
+            text: "Prediction:"
+
+        GridLayout:
+            rows: 2
+            size: root.width, root.height
+
+
+            Label:
+                id: predictionLabel
+                text: "No prediction yet..."
+
+            Button:
+                id: predict_btn
+                text: "Predict"
+                on_release: app.root.ids.predictionLabel.text = root.predictDisease(app.root.ids.imageLabel.text)
+
+<LoadDialog>:
+    BoxLayout:
+        size: root.size
+        pos: root.pos
+        orientation: "vertical"
+
+        FileChooserListView:
+            id: filechooser
+
+        BoxLayout:
+            size_hint_y: None
+            height: 30
+
+            Button:
+                text: "Cancel"
+                on_release: root.cancel()
+
+            Button:
+                text: "Load"
+                on_release: root.load(filechooser.path, filechooser.selection)
+                on_release: app.root.ids.imageLabel.text = filechooser.selection[0]
