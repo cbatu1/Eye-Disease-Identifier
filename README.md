@@ -4,8 +4,8 @@ A desktop application implemented in Python that uses a convolutional neural net
 
 ## Requirements ##
 
-• Python 3.5+
-• Keras
-• TensorFlow
-• OpenCV
-• Kivy
+* Python 3.5+
+* Keras
+* TensorFlow
+* OpenCV
+* Kivy
