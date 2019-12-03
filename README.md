@@ -19,4 +19,4 @@ A desktop application implemented in Python that uses a convolutional neural net
 
 ## Future Contributions ##
 
-The current data sets are small and would require more data to further increase the accuracy of the model. Other adjustments could include methods to balance out the data such as oversampling of majority classes. 
+The current data sets are small and would require more data to further increase the accuracy of the model. Other adjustments could include methods to balance out the data such as oversampling of majority classes. The GUI is fairly basic and will require modifications to improve user experience. 
